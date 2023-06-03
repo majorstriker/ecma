@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework1</title>
+</head>
+
+<body>
+    <script>
+        class Book {
+            title = 'Война и мир';
+            author = 'Лев Толстой';
+            pages = 500;
+            displayInfo() {
+                console.log(`Книга ${this.title} от автора ${this.author} имеет ${this.pages} страниц`);
+            };
+        };
+        const book1 = new Book;
+        book1.displayInfo();
+
+        class Student {
+            constructor(name, age, grade) {
+                this.name = name;
+                this.age = age;
+                this.grade = grade;
+            }
+            displayInfo1() {
+                console.log(`Student ${this.name} is ${this.age} year old and study in ${this.grade}`);
+            }
+
+        }
+
+        const student1 = new Student("John Smith", 16, "10th grade");
+        student1.displayInfo1();
+
+        const student2 = new Student("Jane Doe", 17, "11th grade");
+        student2.displayInfo1();
+    </script>
+</body>
+
+</html>
