@@ -10,26 +10,19 @@
 
 <body>
     <script>
-        // Задача 1
-        const arr = [1, 5, 7, 9];
-
-        const minimum = Math.min(...arr);
-        console.log(minimum);
-
-        // Задача 2
-        // Напишите функцию createCounter, которая создает счетчик и возвращает объект с двумя методами: increment и decrement. Метод increment должен увеличивать значение счетчика на 1, а метод decrement должен уменьшать значение счетчика на 1. Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
-        function createCounter(newValue) {
-            let counter = 0;
+        //         Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:
+        // Свойство title (название) - строка, название книги.
+        // Свойство author (автор) - строка, имя автора книги.
+        // Свойство pages (количество страниц) - число, количество страниц в книге.
+        // Метод displayInfo() - выводит информацию о книге (название, автор и количество страниц).
+        class Book {
+            title: 'Война и мир';
+            author: 'Лев Толстой';
+            pages = 500;
+            diplayInfo() {
+                console.log(`Книга ${this.title} от автора ${this.author} имеет ${this.pages} страниц`);
+            }
         }
-
-        d
-
-        // Задача 3
-        // Напишите рекурсивную функцию findElementByClass, которая принимает корневой элемент дерева DOM и название класса в качестве аргументов и возвращает первый найденный элемент с указанным классом в этом дереве.
-        //         Пример
-        // const rootElement = document.getElementById('root');
-        // const targetElement = findElementByClass(rootElement, 'my-class');
-        // console.log(targetElement);
     </script>
 </body>
 
