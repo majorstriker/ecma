@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework4</title>
+</head>
+
+<body>
+    <ul class="userList">
+
+    </ul>
+
+    <div class="message">Сообщение пропадет через 2 секунды</div>
+    <script>
+        //Задание 1
+        function getUserData(url) {
+            return fetch(url)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        console.log();
+                        ('Ошибка при выполнении запроса:', response.status);
+                    }
+                });
+        }
+
+        function printUsersList(users) {
+            const userListEl = document.querySelector('.userList');
+            userListEl.innerHTML = '';
+
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = user.id;
+                userListEl.appendChild(li);
+            });
+        }
+
+        const url = 'https://jsonplaceholder.typicode.com/users';
+        getUserData(url)
+            .then(users => {
+                printUsersList(users);
+            });
+
+        //Задание 3
+        const changeStyleDelayed = (element, delay) =>
+            setTimeout(() => {
+                document.querySelector('.message').style.display = 'none';
+            }, delay);
+        changeStyleDelayed('myElement', 2000);
+    </script>
+</body>
+
+</html>
